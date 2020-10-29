@@ -1,7 +1,13 @@
 body {
+  background-color: #78EBC1;
   text-align: center;
 }
 
 .message {
   padding: 0 4rem;
+}
+
+.submit {
+  background-color: #D580EB;
+  color: #FBC360;
 }
