@@ -34,11 +34,15 @@ function App() {
         <button className="btn submit" onClick={submit}>Submit</button>
       </div> : (render == "bullied") ?
         <div class="wrapper">
-          <h1>Bullying Information</h1>
-          <button className="btn submit" onClick={() => setRender("home")}>Back To Homepage</button>
+          <header>
+            <h1>Bullying Information</h1>
+          </header>
+            <button className="btn submit" onClick={() => setRender("home")}>Back To Homepage</button>
         </div> :
         <div class="wrapper">
-          <h1>Not bullied tab</h1>
+          <header>
+            <h1>Not bullied tab</h1>
+          </header>
           <button className="btn submit" onClick={() => setRender("home")}>Back To Homepage</button>
         </div>
   );
