@@ -3,6 +3,10 @@ body {
   text-align: center;
 }
 
+header {
+  padding: 2.5rem 0;
+}
+
 .message {
   padding: 0 4rem;
 }
@@ -11,3 +15,4 @@ body {
   background-color: #D580EB;
   color: #FBC360;
 }
+
