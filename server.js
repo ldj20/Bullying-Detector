@@ -11,7 +11,7 @@ app.post('/', (req, res) => {
     const modelId = process.env.MODELID;
     const text = req.text;
     const client = new PredictionServiceClient();
-
+    console.log(text);
     const request = {
       name: client.modelPath(projectId, location, modelId),
         payload: {
