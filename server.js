@@ -6,14 +6,10 @@ const cors = require("cors");
 app.use(cors());
 
 app.post('/', (req, res) => {
-    res.send("back");
     const projectId = process.env.PID;
     const location = process.env.LOCATION;
     const modelId = process.env.MODELID;
     const text = req.text;
-    console.log(projectId);
-    console.log(location);
-    console.log(modelId);
     const client = new PredictionServiceClient();
 
     const request = {
@@ -25,10 +21,7 @@ app.post('/', (req, res) => {
           },
         },
     };
-    console.log(here1);
     const response = client.predict(request);
-    console.log(here2);
-    console.log(response);
     res.send(response);
 });
 
