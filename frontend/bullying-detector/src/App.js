@@ -1,34 +1,20 @@
 import { useState } from 'react';
-const axios = require('axios');
-const {PredictionServiceClient} = require('@google-cloud/automl').v1;
+import axios from 'axios';
 
 function App() {
-
-  const projectId = "bullying-detector";
-  const location = "us-central1";
-  const modelId = "TCN4022003638799958016";
-  const scoreThreshold = "0.6";
-  const params = {score_threshold: scoreThreshold};
-
-  const client = new PredictionServiceClient();
 
   const [text, setText] = useState("");
   const [render, setRender] = useState("home");
   const [prediction, setPrediction] = useState(); 
 
-  const predict = () => {
-    const request = {
-      name: client.modelPath(projectId, location, modelId),
-      payload: {
-        textSnippet: {
-          content: text,
-          mimeType: 'text/plain',
-        },
-      },
-    };
-    const [response] = client.predict(request);
-    setPrediction(response);
-    console.log(response);
+  const predict = event => {
+    axios.post('http://localhost:8000/')
+      .then(response => {
+        setPrediction(response);
+      })
+      .catch(e => {
+        console.log(e);
+      })
   }
 
   const handleInput = event => {
