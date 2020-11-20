@@ -21,7 +21,6 @@ app.post('/', (req, res) => {
           },
         },
     };
-    console.log("here");
     client.predict(request)
       .then(response => {
         console.log(response);
@@ -30,7 +29,6 @@ app.post('/', (req, res) => {
       .catch(e => {
         console.log(e);
       })
-    console.log("here2");
 });
 
 app.listen(process.env.PORT || 8000, () => {
