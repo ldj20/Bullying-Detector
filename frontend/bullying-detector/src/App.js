@@ -8,7 +8,7 @@ function App() {
   const [prediction, setPrediction] = useState(); 
 
   const predict = event => {
-    axios.post('http://localhost:8000/')
+    axios.post("https://bullying-detector.herokuapp.com")
       .then(response => {
         setPrediction(response);
       })

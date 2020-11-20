@@ -6,9 +6,9 @@ const cors = require("cors");
 app.use(cors());
 
 app.post('/', (req, res) => {
-    const projectId = "bullying-detector";
-    const location = "us-central1";
-    const modelId = "TCN4022003638799958016";
+    const projectId = process.env.PID;
+    const location = process.env.LOCATION;
+    const modelId = process.env.MODELID;
     const text = req.text;
   
     const client = new PredictionServiceClient();
