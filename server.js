@@ -21,10 +21,16 @@ app.post('/', (req, res) => {
           },
         },
     };
+    console.log("here");
     client.predict(request)
       .then(response => {
+        console.log(response);
         res.send(response);
       })
+      .catch(e => {
+        console.log(e);
+      })
+    console.log("here2");
 });
 
 app.listen(process.env.PORT || 8000, () => {
