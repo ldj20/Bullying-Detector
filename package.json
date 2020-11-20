@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/ldj20/Bullying-Detector/issues"
   },
-  "homepage": "https://github.com/ldj20/Bullying-Detector#readme"
+  "homepage": "https://github.com/ldj20/Bullying-Detector#readme",
+  "scripts": {
+    "start": "node server.js"
+  }
 }
