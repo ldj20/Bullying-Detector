@@ -5,8 +5,8 @@ const cors = require("cors");
 
 app.use(cors());
 
-async function predict(req, res) {
-  const projectId = process.env.PID;
+app.post('/', (req, res) => {
+    const projectId = process.env.PID;
     const location = process.env.LOCATION;
     const modelId = process.env.MODELID;
     const text = req.text;
@@ -21,11 +21,11 @@ async function predict(req, res) {
           },
         },
     };
-    const response = await client.predict(request);
-    res.send(response);
-}
-
-app.post('/', predict(req, res));
+    client.predict(request)
+      .then(response => {
+        res.send(response);
+      })
+});
 
 app.listen(process.env.PORT || 8000, () => {
   console.log(`server up and running`)
