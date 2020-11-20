@@ -6,6 +6,7 @@ const cors = require("cors");
 app.use(cors());
 
 app.post('/', (req, res) => {
+    res.send("back");
     const projectId = process.env.PID;
     const location = process.env.LOCATION;
     const modelId = process.env.MODELID;
