@@ -2,16 +2,16 @@ const express = require('express')
 const app = express();
 const {PredictionServiceClient} = require('@google-cloud/automl').v1;
 const cors = require("cors");
-
+const bodyParser = require('body-parser')
+var jsonParser = bodyParser.json()
 app.use(cors());
 
-app.post('/', (req, res) => {
-    const projectId = process.env.PID;
-    const location = process.env.LOCATION;
-    const modelId = process.env.MODELID;
-    const text = req.text;
+app.post('/', jsonParser, (req, res) => {
+    const projectId = "bullying-detector";
+    const location = "us-central1";
+    const modelId = "TCN4022003638799958016";
+    const text = req.body.text;
     const client = new PredictionServiceClient();
-    console.log(req);
     const request = {
       name: client.modelPath(projectId, location, modelId),
         payload: {
