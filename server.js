@@ -23,7 +23,7 @@ app.post('/', jsonParser, (req, res) => {
     };
     client.predict(request)
       .then(response => {
-        console.log(response);
+        console.log("here1");
         res.send(response);
       })
       .catch(e => {
