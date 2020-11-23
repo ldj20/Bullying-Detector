@@ -33,6 +33,8 @@ app.post('/', jsonParser, asyncFetch, (req, res) => {
   if (data.displayName == "bullying") {
     if (data.classification.score >= 0.6) {
       res.send("bullied");
+    } else {
+      res.send("not_bullied")
     }
   } else {
     res.send("not_bullied")

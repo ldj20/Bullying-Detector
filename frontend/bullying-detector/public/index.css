@@ -1,6 +1,7 @@
 body {
-  background-color: #78EBC1;
+  background-color: #8C92AC;
   text-align: center;
+  color: #F1ECF7;
 }
 
 header {
@@ -12,8 +13,12 @@ header {
 }
 
 .submit {
-  background-color: #D580EB;
-  color: #FBC360;
+  background-color: #FBC360;
+  color: black;
+}
+
+.gridDiv {
+  display: grid;
 }
 
 .infoDiv {
