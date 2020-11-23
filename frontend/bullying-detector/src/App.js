@@ -13,7 +13,7 @@ function App() {
     axios.post("https://bullying-detector.herokuapp.com", {text: text})
       .then(response => {
         setRender(response.data);
-        console.log(response.data);
+        setText("");
       })
       .catch(e => {
         console.log(e);
