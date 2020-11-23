@@ -8,9 +8,13 @@ function App() {
   const [prediction, setPrediction] = useState(); 
 
   const predict = () => {
-    axios.post("https://bullying-detector.herokuapp.com")
+    axios.post("https://bullying-detector.herokuapp.com", {text: text})
       .then(response => {
         setPrediction(response);
+        console.log("response:");
+        console.log(response);
+        console.log("prediction:");
+        console.log(prediction);
       })
       .catch(e => {
         console.log(e);
@@ -64,7 +68,7 @@ function App() {
           <div class="wrapper">
             <header>
               <h1>Resources</h1>
-              
+
             </header>
             <button className="btn submit" onClick={() => setRender("home")}>Back To Homepage</button>
           </div>
