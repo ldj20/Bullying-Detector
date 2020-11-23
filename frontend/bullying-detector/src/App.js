@@ -46,35 +46,47 @@ function App() {
       </div> : (render == "bullied") ?
         <div className="wrapper">
           <header>
-            <h1>Cyberbullying</h1>
+            <h1>Content May Be Cyberbullying</h1>
             <p className="message">Based off the message(s) you pasted, you are being bullied.
             Don't panic, you can handle this! Here's a list of links you can follow that
             can give you good information about handling bullies. However, the best thing you can 
             do is reach out to a trusted adult for help.</p>
-            <div className="gridDiv">
-              <div className="infoDiv">
-                <span>Use this to start off: </span>
-                <a href="https://www.connectsafely.org/tips-to-help-stop-cyberbullying/">https://www.connectsafely.org/tips-to-help-stop-cyberbullying</a>
+            <div className="container">
+                <div className="row">
+                  <div className="infoDiv col col-lg-4 col-12">
+                    <div>Use this to start off: </div>
+                    <a href="https://www.connectsafely.org/tips-to-help-stop-cyberbullying/">ConnectSafely</a>
+                  </div>
+                  <div className="infoDiv col col-lg-4 col-12">
+                    <div>Here's an article you can read: </div>
+                    <a href="https://kidshealth.org/en/kids/bullies.html">KidsHealth</a>
+                  </div>
+                  <div className="infoDiv col col-lg-4 col-12">
+                    <div>This is another website with helpful information: </div>
+                    <a href="https://www.kidscape.org.uk/advice/advice-for-young-people/dealing-with-bullying/">KidScape</a>
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="infoDiv col col-lg-4 col-12">
+                    <div>And another: </div>
+                    <a href="https://www.ncab.org.au/bullying-advice/bullying-for-kids/how-to-deal-with-bullies/">National Centre Against Bullying</a>
+                  </div>
+                  <div className="infoDiv col col-lg-4 col-12">
+                    <div>This is an interactive website: </div>
+                    <a href="https://www.childline.org.uk/">Childline</a>
+                  </div>
+                  <div className="infoDiv col col-lg-4 col-12">
+                    <div>Here are hotlines you can call: </div>
+                    <a href="https://bullybust.org/resources">BullyBust</a>
+                  </div>
+                </div>
               </div>
-              <div className="infoDiv">
-                <span>Here's an article you can read: </span>
-                <a href="https://kidshealth.org/en/kids/bullies.html">https://kidshealth.org/en/kids/bullies.html</a>
-              </div>
-              <div className="infoDiv">
-                <span>This is another website with helpful information: </span>
-                <a href="https://www.kidscape.org.uk/advice/advice-for-young-people/dealing-with-bullying/">https://www.kidscape.org.uk/advice/advice-for-young-people/dealing-with-bullying/</a>
-              </div>
-              <div className="infoDiv">
-                <span>Here are hotlines you can call: </span>
-                <a href="https://bullybust.org/resources">https://bullybust.org/resources</a>
-              </div>
-            </div>
           </header>
             <button className="btn submit" onClick={() => setRender("home")}>Back To Homepage</button>
         </div> : (render == "not_bullied") ?
           <div className="wrapper">
             <header>
-              <h1>Not Cyberbullying</h1>
+              <h1>Content Is Probably Not Cyberbullying</h1>
               <p className="message">Based off the message(s) you pasted, you are not being bullied.
               If you think otherwise or have any doubts, that's completely understandable! Please
               reach out to a trusted adult if you think you may be being bullied, regardless of what
@@ -86,22 +98,34 @@ function App() {
             <header>
               <h1>Resources</h1>
               <p>If you want to stand up to a bully or want to help a friend, these links can be helpful</p>
-              <div className="gridDiv">
-                <div className="infoDiv">
-                  <span>Use this to start off: </span>
-                  <a href="https://www.connectsafely.org/tips-to-help-stop-cyberbullying/">https://www.connectsafely.org/tips-to-help-stop-cyberbullying</a>
+              <div className="container">
+                <div className="row">
+                  <div className="infoDiv col col-lg-4 col-12">
+                    <div>Use this to start off: </div>
+                    <a href="https://www.connectsafely.org/tips-to-help-stop-cyberbullying/">ConnectSafely</a>
+                  </div>
+                  <div className="infoDiv col col-lg-4 col-12">
+                    <div>Here's an article you can read: </div>
+                    <a href="https://kidshealth.org/en/kids/bullies.html">KidsHealth</a>
+                  </div>
+                  <div className="infoDiv col col-lg-4 col-12">
+                    <div>This is another website with helpful information: </div>
+                    <a href="https://www.kidscape.org.uk/advice/advice-for-young-people/dealing-with-bullying/">KidScape</a>
+                  </div>
                 </div>
-                <div className="infoDiv">
-                  <span>Here's an article you can read: </span>
-                  <a href="https://kidshealth.org/en/kids/bullies.html">https://kidshealth.org/en/kids/bullies.html</a>
-                </div>
-                <div className="infoDiv">
-                  <span>This is another website with helpful information: </span>
-                  <a href="https://www.kidscape.org.uk/advice/advice-for-young-people/dealing-with-bullying/">https://www.kidscape.org.uk/advice/advice-for-young-people/dealing-with-bullying/</a>
-                </div>
-                <div className="infoDiv">
-                  <span>Here are hotlines you can call: </span>
-                  <a href="https://bullybust.org/resources">https://bullybust.org/resources</a>
+                <div className="row">
+                  <div className="infoDiv col col-lg-4 col-12">
+                    <div>And another: </div>
+                    <a href="https://www.ncab.org.au/bullying-advice/bullying-for-kids/how-to-deal-with-bullies/">National Centre Against Bullying</a>
+                  </div>
+                  <div className="infoDiv col col-lg-4 col-12">
+                    <div>This is an interactive website: </div>
+                    <a href="https://www.childline.org.uk/">Childline</a>
+                  </div>
+                  <div className="infoDiv col col-lg-4 col-12">
+                    <div>Here are hotlines you can call: </div>
+                    <a href="https://bullybust.org/resources">BullyBust</a>
+                  </div>
                 </div>
               </div>
             </header>
