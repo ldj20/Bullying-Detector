@@ -26,7 +26,7 @@ function App() {
   
   return (
     (render == "home") ? 
-      <div class="wrapper">
+      <div className="wrapper">
         <header>
           <h1>Bullying Detector</h1>
           <p className="message">Welcome! If you ever think that someone may be cyberbullying you, you can
@@ -43,18 +43,33 @@ function App() {
         <br/>
         <button className="btn submit" onClick={predict}>Submit</button>
       </div> : (render == "bullied") ?
-        <div class="wrapper">
+        <div className="wrapper">
           <header>
             <h1>Cyberbullying</h1>
             <p className="message">Based off the message(s) you pasted, you are being bullied.
             Don't panic, there's solutions to this! Here's a list of links you can follow that
             can give you good information about handling bullies. However, the best thing you can 
             do is reach out to a trusted adult for help.</p>
-            
+            <div className="infoDiv">
+              <span>Use this to start off: </span>
+              <a href="https://www.connectsafely.org/tips-to-help-stop-cyberbullying/">https://www.connectsafely.org/tips-to-help-stop-cyberbullying</a>
+            </div>
+            <div className="infoDiv">
+              <span>Here's an article you can read: </span>
+              <a href="https://kidshealth.org/en/kids/bullies.html">https://kidshealth.org/en/kids/bullies.html</a>
+            </div>
+            <div className="infoDiv">
+              <span>This is another website with helpful information: </span>
+              <a href="https://www.kidscape.org.uk/advice/advice-for-young-people/dealing-with-bullying/">https://www.kidscape.org.uk/advice/advice-for-young-people/dealing-with-bullying/</a>
+            </div>
+            <div className="infoDiv">
+              <span>Here are hotlines you can call: </span>
+              <a href="https://bullybust.org/resources">https://bullybust.org/resources</a>
+            </div>
           </header>
             <button className="btn submit" onClick={() => setRender("home")}>Back To Homepage</button>
         </div> : (render == "not_bullied") ?
-          <div class="wrapper">
+          <div className="wrapper">
             <header>
               <h1>Not Cyberbullying</h1>
               <p className="message">Based off the message(s) you pasted, you are not being bullied.
@@ -64,10 +79,26 @@ function App() {
             </header>
             <button className="btn submit" onClick={() => setRender("home")}>Back To Homepage</button>
           </div> :
-          <div class="wrapper">
+          <div className="wrapper">
             <header>
               <h1>Resources</h1>
-
+              <p>If you want to stand up to a bully or want to help a friend, these links can be helpful</p>
+              <div className="infoDiv">
+                <span>Use this to start off: </span>
+                <a href="https://www.connectsafely.org/tips-to-help-stop-cyberbullying/">https://www.connectsafely.org/tips-to-help-stop-cyberbullying</a>
+              </div>
+              <div className="infoDiv">
+                <span>Here's an article you can read: </span>
+                <a href="https://kidshealth.org/en/kids/bullies.html">https://kidshealth.org/en/kids/bullies.html</a>
+              </div>
+              <div className="infoDiv">
+                <span>This is another website with helpful information: </span>
+                <a href="https://www.kidscape.org.uk/advice/advice-for-young-people/dealing-with-bullying/">https://www.kidscape.org.uk/advice/advice-for-young-people/dealing-with-bullying/</a>
+              </div>
+              <div className="infoDiv">
+                <span>Here are hotlines you can call: </span>
+                <a href="https://bullybust.org/resources">https://bullybust.org/resources</a>
+              </div>
             </header>
             <button className="btn submit" onClick={() => setRender("home")}>Back To Homepage</button>
           </div>
