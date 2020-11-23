@@ -5,16 +5,15 @@ function App() {
 
   const [text, setText] = useState("");
   const [render, setRender] = useState("home");
-  const [prediction, setPrediction] = useState(); 
 
   const predict = () => {
+    if (text == "" || text == undefined || text == null) {
+      return;
+    }
     axios.post("https://bullying-detector.herokuapp.com", {text: text})
       .then(response => {
-        setPrediction(response);
-        console.log("response:");
-        console.log(response);
-        console.log("prediction:");
-        console.log(prediction);
+        setRender(response.data);
+        console.log(response.data);
       })
       .catch(e => {
         console.log(e);
@@ -37,7 +36,7 @@ function App() {
           best thing to do is talk to a trusted adult about it. You are not alone.</p>
 
           <p>If you want to learn how to handle bullies, click this button.</p>
-          <button className="btn submit" onClick={() => setRender("bullied")}>Information</button>
+          <button className="btn submit" onClick={() => setRender("info")}>Information</button>
         </header>
         <h3>Paste Text Here</h3>
         <textarea name="paragraph_text" cols="50" rows="13" onChange={handleInput}></textarea>
@@ -54,7 +53,7 @@ function App() {
             
           </header>
             <button className="btn submit" onClick={() => setRender("home")}>Back To Homepage</button>
-        </div> : (render == "not bullied") ?
+        </div> : (render == "not_bullied") ?
           <div class="wrapper">
             <header>
               <h1>Not Cyberbullying</h1>

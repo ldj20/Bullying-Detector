@@ -30,13 +30,12 @@ async function asyncFetch (req, res, next) {
 
 app.post('/', jsonParser, asyncFetch, (req, res) => {
   const data = req.data[0];
-  console.log(data);
   if (data.displayName == "bullying") {
     if (data.classification.score >= 0.6) {
-      res.send("bullying");
+      res.send("bullied");
     }
   } else {
-    res.send("not_bullying")
+    res.send("not_bullied")
   }
 });
 
