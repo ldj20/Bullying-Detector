@@ -42,19 +42,29 @@ function App() {
       </div> : (render == "bullied") ?
         <div class="wrapper">
           <header>
-            <h1>Bullied Tab</h1>
+            <h1>Cyberbullying</h1>
+            <p className="message">Based off the message(s) you pasted, you are being bullied.
+            Don't panic, there's solutions to this! Here's a list of links you can follow that
+            can give you good information about handling bullies. However, the best thing you can 
+            do is reach out to a trusted adult for help.</p>
+            
           </header>
             <button className="btn submit" onClick={() => setRender("home")}>Back To Homepage</button>
         </div> : (render == "not bullied") ?
           <div class="wrapper">
             <header>
-              <h1>Not bullied tab</h1>
+              <h1>Not Cyberbullying</h1>
+              <p className="message">Based off the message(s) you pasted, you are not being bullied.
+              If you think otherwise or have any doubts, that's completely understandable! Please
+              reach out to a trusted adult if you think you may be being bullied, regardless of what
+              this website tells you.</p>
             </header>
             <button className="btn submit" onClick={() => setRender("home")}>Back To Homepage</button>
           </div> :
           <div class="wrapper">
             <header>
-              <h1>Informational Tab</h1>
+              <h1>Resources</h1>
+              
             </header>
             <button className="btn submit" onClick={() => setRender("home")}>Back To Homepage</button>
           </div>

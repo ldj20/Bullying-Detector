@@ -5,16 +5,14 @@ const cors = require("cors");
 const bodyParser = require('body-parser');
 
 const jsonParser = bodyParser.json();
-const projectId = "bullying-detector";
-const location = "us-central1";
-const modelId = "TCN4022003638799958016";
-const client = new PredictionServiceClient();
 
 app.use(cors());
 
-const ex = () => {}
-
 async function asyncFetch (req, res, next) {
+  const projectId = process.env.PID;
+  const location = "us-central1";
+  const modelId = process.env.MODELID;
+  const client = new PredictionServiceClient();
   const content = req.body.text;
   const request = {
     name: client.modelPath(projectId, location, modelId),
@@ -25,14 +23,20 @@ async function asyncFetch (req, res, next) {
       },
     },
   };
-  console.log(request);
-  const [response] = await client.predict(request)
-  req.data = response.json();
+  const [response] = await client.predict(request);
+  req.data = response.payload;
   next();
 }
 
 app.post('/', jsonParser, asyncFetch, (req, res) => {
-  res.send(req.data);
+  const data = req.data[0];
+  if (data.displayName == "bullying") {
+    if (data.classification.score >= 0.6) {
+      res.send("bullying");
+    }
+  } else {
+    res.send("not_bullying")
+  }
 });
 
 app.listen(process.env.PORT || 8000, () => {
