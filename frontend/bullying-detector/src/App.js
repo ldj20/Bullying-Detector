@@ -49,7 +49,7 @@ function App() {
         <div className="wrapper">
           <header>
             <h1>Content May Be Cyberbullying</h1>
-            <p className="message">Based off the message(s) you pasted, you may be being bullied.
+            <p className="message">Based off the message(s) you pasted, you may be getting bullied.
             Don't panic, you can handle this! Here's a list of links you can follow that
             can give you good information about handling bullies. However, the best thing you can 
             do is reach out to a trusted adult for help.</p>
@@ -91,7 +91,7 @@ function App() {
               <h1>Content Is Probably Not Cyberbullying</h1>
               <p className="message">Based off the message(s) you pasted, you are not being bullied.
               If you think otherwise or have any doubts, that's completely understandable! Please
-              reach out to a trusted adult if you think you may be being bullied, regardless of what
+              reach out to a trusted adult if you think you may be getting bullied, regardless of what
               this website tells you.</p>
             </header>
             <button className="btn submit" onClick={() => setRender("home")}>Back To Homepage</button>
