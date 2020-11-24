@@ -4,6 +4,10 @@ body {
   color: #F1ECF7;
 }
 
+.wrapper {
+  margin-top: 10rem;
+}
+
 header {
   padding: 2.5rem 0;
 }
@@ -14,7 +18,7 @@ header {
 
 .submit {
   background-color: #FBC360;
-  color: black;
+  color: #78767a;
 }
 
 .gridDiv {

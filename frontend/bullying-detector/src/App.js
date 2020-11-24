@@ -27,7 +27,7 @@ function App() {
   
   return (
     (render == "home") ? 
-      <div className="wrapper">
+      <div>
         <header>
           <h1>Bullying Detector</h1>
           <p className="message">Welcome! If you ever think that someone may be cyberbullying you, you can
