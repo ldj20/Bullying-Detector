@@ -4,8 +4,10 @@ body {
   color: #F1ECF7;
 }
 
-.wrapper {
-  margin-top: 10rem;
+@media(min-width: 375px) {
+  .wrapper {
+    margin-top: 10rem;
+  }
 }
 
 header {
