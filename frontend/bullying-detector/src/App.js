@@ -36,7 +36,7 @@ function App() {
           your feelings are important. If you are worried that you are being bullied, the
           best thing to do is talk to a trusted adult about it. You are not alone.</p>
 
-          <p>This app does not store any data you submit.</p>
+          <p>Note: the more text you submit, the more accurate the app is. This app does not store any data you submit.</p>
 
           <p>If you want to learn how to handle bullies, click this button.</p>
           <button className="btn submit" onClick={() => setRender("info")}>Information</button>
