@@ -49,7 +49,7 @@ function App() {
         <div className="wrapper">
           <header>
             <h1>Content May Be Cyberbullying</h1>
-            <p className="message">Based off the message(s) you pasted, you are being bullied.
+            <p className="message">Based off the message(s) you pasted, you may be being bullied.
             Don't panic, you can handle this! Here's a list of links you can follow that
             can give you good information about handling bullies. However, the best thing you can 
             do is reach out to a trusted adult for help.</p>
